@@ -96,7 +96,7 @@ document.querySelectorAll("section").forEach(section => {
 // ===========================
 
 emailjs.init({
-    publicKey: "YOUR_PUBLIC_KEY",
+    publicKey: "zIJfPdDswuj1bYpJ4",
 });
 
 const contactForm = document.getElementById("contact-form");
