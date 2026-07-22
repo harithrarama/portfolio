@@ -91,9 +91,7 @@ document.querySelectorAll("section").forEach(section => {
     observer.observe(section);
 
 });
-// ===========================
 // EmailJS Contact Form
-// ===========================
 
 emailjs.init({
     publicKey: "zIJfPdDswuj1bYpJ4",
@@ -101,20 +99,30 @@ emailjs.init({
 
 const contactForm = document.getElementById("contact-form");
 
-contactForm.addEventListener("submit", function(e) {
-    e.preventDefault();
+if (contactForm) {
 
-    emailjs.send("service_m15pt0l", "template_a19gpvo", {
-        from_name: document.getElementById("name").value,
-        from_email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-    })
-    .then(() => {
-        alert("Message sent successfully!");
-        contactForm.reset();
-    })
-    .catch((error) => {
-        alert("Failed to send message.");
-        console.log(error);
+    contactForm.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        emailjs.send(
+            "service_m15pt0l",
+            "template_a19gpvo",
+            {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            }
+        )
+        .then(() => {
+            alert("Message sent successfully!");
+            contactForm.reset();
+        })
+        .catch((error) => {
+            alert("Failed to send message.");
+            console.log(error);
+        });
+
     });
-});
+
+}
