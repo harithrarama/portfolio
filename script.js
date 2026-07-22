@@ -130,7 +130,7 @@ if (contactForm) {
 
 
         emailjs.send(
-            "service_m15pt0l",
+            "service_wld4ptl",
             "template_a19gpvo",
             {
                 from_name: document.getElementById("name").value,
