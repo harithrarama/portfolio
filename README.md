@@ -124,8 +124,8 @@ I would love to connect with you and discuss opportunities, collaborations, or i
 
 - 🌐 Portfolio: Add your portfolio link
 - 💻 GitHub: https://github.com/harithrarama
-- 🔗 LinkedIn: Add your LinkedIn URL
-- 📧 Email: Add your email address
+- 🔗 LinkedIn: https://www.linkedin.com/in/harithrarama
+- 📧 Email: harithra0604@gmail.com
 
 Feel free to reach out for internships, projects, and software development opportunities.
 
