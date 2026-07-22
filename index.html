@@ -6,7 +6,8 @@
     <title>Harithra Rama | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
 <body>
 
     <div class="badge">
@@ -148,53 +149,67 @@
 
     </section>
 
-    <section class="projects" id="projects">
+   <section class="projects" id="projects">
 
-        <div class="projects-title">
-            <h2>My Projects</h2>
+    <div class="projects-title">
+        <h2>My Projects</h2>
+    </div>
+
+    <div class="projects-container">
+
+        <!-- To-Do Project -->
+        <div class="project-card">
+            <h3>To-Do Application</h3>
+            <p>
+                Created a responsive task management application with features for adding,
+                updating, and deleting tasks to improve productivity.
+            </p>
+
+            <span>HTML • CSS • JavaScript</span>
+
+            <div class="project-buttons">
+                <a href="https://todo-project-ten-sandy.vercel.app"
+                   target="_blank"
+                   class="project-btn demo-btn">
+                    Live Demo
+                </a>
+
+                <a href="https://github.com/harithrarama/todo-project"
+                   target="_blank"
+                   class="project-btn github-btn">
+                    GitHub
+                </a>
+            </div>
         </div>
 
-        <div class="projects-container">
+        <!-- Internship Management System -->
+        <div class="project-card">
+            <h3>Internship Management System</h3>
+            <p>
+                Developed a full-stack MERN application with user authentication,
+                role-based access, and MongoDB integration for managing internships.
+            </p>
 
-            <div class="project-card">
-                <h3>To-Do Application</h3>
-                <p>
-                    Created a task management application with features for adding,
-                    updating, and deleting tasks to improve productivity.
-                </p>
+            <span>MongoDB • Express • React • Node.js</span>
 
-                <span>HTML • CSS • JavaScript</span>
+            <div class="project-buttons">
+                <a href="https://internship-management-system-ecru.vercel.app"
+                   target="_blank"
+                   class="project-btn demo-btn">
+                    Live Demo
+                </a>
 
-                <div class="project-buttons">
-                    <a href="https://github.com/harithrarama/todo-project"
-                       target="_blank"
-                       class="project-btn github-btn">
-                        GitHub
-                    </a>
-                </div>
+                <a href="https://github.com/harithrarama/internship-management"
+                   target="_blank"
+                   class="project-btn github-btn">
+                    GitHub
+                </a>
             </div>
-            
-            <div class="project-card">
-                <h3>Internship Management System</h3>
-                <p>
-                    Developed a MERN Stack application to manage interns,
-                    track progress, assign tasks, and streamline internship workflows.
-                </p>
-
-                <span>MongoDB • Express • React • Node.js</span>
-
-                <div class="project-buttons">
-                    <a href="https://github.com/harithrarama/internship-management"
-                       target="_blank"
-                       class="project-btn github-btn">
-                        GitHub
-                    </a>
-                </div>
-            </div>
-
         </div>
 
-    </section>
+    </div>
+
+</section>
 
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
@@ -222,12 +237,29 @@
                 </div>
             </div>
 
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="6" placeholder="Your Message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <form class="contact-form" id="contact-form">
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Your Email"
+        required>
+
+    <textarea
+        id="message"
+        rows="6"
+        placeholder="Your Message"
+        required></textarea>
+
+    <button type="submit">Send Message</button>
+
+</form>
 
         </div>
 

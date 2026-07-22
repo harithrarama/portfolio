@@ -303,34 +303,41 @@ body{
 /* PROJECT BUTTONS */
 
 .project-buttons{
-    display:flex;
-    gap:10px;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .project-btn{
-    text-decoration:none;
-    padding:10px 18px;
-    border-radius:8px;
-    background:#6EC1FF;
-    color:#0b1220;
-    font-weight:600;
-    transition:0.3s;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.project-btn:hover{
-    transform:scale(1.05);
-    background:#D6B48A;
+/* Live Demo Button */
+.demo-btn{
+    background: #6EC1FF;
+    color: #0b1220;
 }
 
+.demo-btn:hover{
+    transform: scale(1.05);
+    background: #D6B48A;
+}
+
+/* GitHub Button */
 .github-btn{
-    background:transparent;
-    color:#D6B48A;
-    border:1px solid #D6B48A;
+    background: transparent;
+    color: #D6B48A;
+    border: 1px solid #D6B48A;
 }
 
 .github-btn:hover{
-    background:#D6B48A;
-    color:#0b1220;
+    background: #D6B48A;
+    color: #0b1220;
+    transform: scale(1.05);
 }
 
 /* CONTACT */
@@ -398,4 +405,23 @@ body{
 
 .contact-form button:hover{
     background:#D6B48A;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.nav-links a.active{
+    color:#D6B48A;
+}
+
+.hidden{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
 }
