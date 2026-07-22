@@ -1,8 +1,11 @@
 // ===========================
 // Smooth Scrolling
 // ===========================
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
     anchor.addEventListener("click", function (e) {
+
         e.preventDefault();
 
         const target = document.querySelector(this.getAttribute("href"));
@@ -12,12 +15,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: "smooth"
             });
         }
+
     });
+
 });
+
 
 // ===========================
 // Active Navigation
 // ===========================
+
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -29,11 +36,12 @@ window.addEventListener("scroll", () => {
 
         const sectionTop = section.offsetTop - 120;
 
-        if (pageYOffset >= sectionTop) {
+        if (window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
 
     });
+
 
     navLinks.forEach(link => {
 
@@ -47,28 +55,36 @@ window.addEventListener("scroll", () => {
 
 });
 
+
 // ===========================
 // Navbar Shadow
 // ===========================
+
 const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
+if (navbar) {
 
-    if (window.scrollY > 30) {
+    window.addEventListener("scroll", () => {
 
-        navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.25)";
+        if (window.scrollY > 30) {
 
-    } else {
+            navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.25)";
 
-        navbar.style.boxShadow = "none";
+        } else {
 
-    }
+            navbar.style.boxShadow = "none";
 
-});
+        }
+
+    });
+
+}
+
 
 // ===========================
 // Fade In Animation
 // ===========================
+
 const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
@@ -85,25 +101,33 @@ const observer = new IntersectionObserver(entries => {
     threshold: 0.2
 });
 
+
 document.querySelectorAll("section").forEach(section => {
 
     section.classList.add("hidden");
     observer.observe(section);
 
 });
+
+
+// ===========================
 // EmailJS Contact Form
+// ===========================
 
 emailjs.init({
     publicKey: "zIJfPdDswuj1bYpJ4",
 });
 
+
 const contactForm = document.getElementById("contact-form");
+
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", function(e) {
+    contactForm.addEventListener("submit", function (e) {
 
         e.preventDefault();
+
 
         emailjs.send(
             "service_m15pt0l",
@@ -114,13 +138,22 @@ if (contactForm) {
                 message: document.getElementById("message").value
             }
         )
+
         .then(() => {
+
             alert("Message sent successfully!");
+
             contactForm.reset();
+
         })
+
+
         .catch((error) => {
+
             alert("Failed to send message.");
+
             console.log(error);
+
         });
 
     });
